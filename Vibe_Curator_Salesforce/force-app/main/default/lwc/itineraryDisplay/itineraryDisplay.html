@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Your Curated Itinerary">
+        <div class="slds-p-around_medium">
+            <!-- Itinerary Details -->
+            <p><strong>Destination:</strong> {destination}</p>
+            <p><strong>Time at Destination:</strong> {duration} minutes</p>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+                <template for:each={highlights} for:item="item">
+                    <li key={item}>{item}</li>
+                </template>
+            </ul>
+            <p><strong>Playlist:</strong> {playlist}</p>
+            <!-- Map Component using Leaflet -->
+            <div class="mapContainer" lwc:dom="manual" style="height: 400px;"></div>
+            <lightning-button label="Restart" onclick={handleRestart}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

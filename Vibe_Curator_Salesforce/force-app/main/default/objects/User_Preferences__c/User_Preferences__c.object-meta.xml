@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores questionnaire responses and user preferences.</description>
+    <enableActivities>true</enableActivities>
+    <enableHistory>true</enableHistory>
+    <nameField>
+        <displayFormat>UP-{0000}</displayFormat>
+        <label>User Preference Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>User Preferences</pluralLabel>
+    <label>User Preferences</label>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
