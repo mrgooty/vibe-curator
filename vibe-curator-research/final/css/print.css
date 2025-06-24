@@ -1,0 +1,512 @@
+/* Print Styles for Vibe-Curator Research Report */
+/* Optimized for professional printing and PDF generation */
+
+@media print {
+    /* Reset and base styles */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        color: #000000;
+        background: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Page setup */
+    @page {
+        size: A4;
+        margin: 2cm 1.5cm;
+        
+        @top-center {
+            content: "Vibe-Curator: Modern Web Development Research Report";
+            font-size: 10pt;
+            font-weight: bold;
+            color: #666666;
+        }
+        
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-size: 9pt;
+            color: #666666;
+        }
+        
+        @bottom-left {
+            content: "Generated: " date();
+            font-size: 9pt;
+            color: #666666;
+        }
+    }
+
+    /* Hide navigation and interactive elements */
+    .navbar,
+    .nav-toggle,
+    .copy-button,
+    .tab-buttons,
+    nav,
+    button:not(.print-keep),
+    .hero-stats,
+    .collapsible i {
+        display: none !important;
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        margin-top: 0;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Hero section for print */
+    .hero {
+        background: #f8f9fa !important;
+        color: #000000 !important;
+        padding: 1cm 0;
+        text-align: center;
+        border-bottom: 2pt solid #000000;
+        page-break-after: always;
+    }
+
+    .hero-title {
+        font-size: 24pt;
+        font-weight: bold;
+        margin-bottom: 0.5cm;
+        color: #000000 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 16pt;
+        margin-bottom: 0.5cm;
+        color: #333333 !important;
+    }
+
+    .hero-description {
+        font-size: 12pt;
+        max-width: none;
+        margin: 0 auto 1cm;
+        color: #666666 !important;
+    }
+
+    /* Section styling */
+    .section {
+        padding: 0.5cm 0;
+        page-break-inside: avoid;
+    }
+
+    .section:nth-child(even) {
+        background: none !important;
+    }
+
+    .section-title {
+        font-size: 18pt;
+        font-weight: bold;
+        color: #000000 !important;
+        margin-bottom: 0.5cm;
+        border-bottom: 1pt solid #cccccc;
+        padding-bottom: 0.2cm;
+        page-break-after: avoid;
+    }
+
+    .section-title i {
+        display: none;
+    }
+
+    /* Subsection styling */
+    .research-subsection {
+        margin-bottom: 0.8cm;
+        page-break-inside: avoid;
+    }
+
+    .subsection-title {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #000000 !important;
+        margin-bottom: 0.3cm;
+        page-break-after: avoid;
+    }
+
+    .subsection-title i {
+        display: none;
+    }
+
+    /* Expand all collapsible content */
+    .collapsible-content {
+        max-height: none !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+
+    /* Show all tab content */
+    .tab-content {
+        display: block !important;
+    }
+
+    .tab-content:not(:first-child) {
+        margin-top: 0.5cm;
+        border-top: 1pt solid #eeeeee;
+        padding-top: 0.3cm;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.3cm 0;
+        font-size: 10pt;
+        page-break-inside: avoid;
+    }
+
+    th, td {
+        border: 1pt solid #cccccc;
+        padding: 0.2cm;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background: #f0f0f0 !important;
+        font-weight: bold;
+        color: #000000 !important;
+    }
+
+    tr.recommended {
+        background: #f8f9fa !important;
+    }
+
+    /* Code blocks */
+    pre {
+        background: #f8f9fa !important;
+        border: 1pt solid #cccccc !important;
+        padding: 0.3cm !important;
+        font-family: 'Courier New', Courier, monospace !important;
+        font-size: 9pt !important;
+        line-height: 1.3 !important;
+        overflow: visible !important;
+        white-space: pre-wrap !important;
+        word-wrap: break-word !important;
+        page-break-inside: avoid;
+        margin: 0.3cm 0 !important;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace !important;
+        font-size: 9pt !important;
+        background: #f0f0f0 !important;
+        padding: 0.1cm !important;
+        border-radius: 0 !important;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin: 0.2cm 0;
+        padding-left: 0.8cm;
+    }
+
+    li {
+        margin-bottom: 0.1cm;
+        page-break-inside: avoid;
+    }
+
+    /* Cards and boxes */
+    .summary-card,
+    .pattern-card,
+    .tip-card,
+    .comparison-card,
+    .highlight-box,
+    .recommendation-box {
+        border: 1pt solid #cccccc !important;
+        background: #ffffff !important;
+        padding: 0.3cm !important;
+        margin: 0.3cm 0 !important;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+    }
+
+    .summary-grid,
+    .pattern-grid,
+    .performance-tips,
+    .tech-grid {
+        display: block !important;
+    }
+
+    .summary-card,
+    .pattern-card,
+    .tip-card,
+    .tech-item {
+        margin-bottom: 0.5cm;
+        width: 100% !important;
+    }
+
+    /* Badges */
+    .badge {
+        background: #000000 !important;
+        color: #ffffff !important;
+        padding: 0.1cm 0.2cm !important;
+        font-size: 8pt !important;
+        border-radius: 0 !important;
+    }
+
+    .badge.recommended {
+        background: #000000 !important;
+    }
+
+    .badge.alternative {
+        background: #666666 !important;
+    }
+
+    .badge.consider {
+        background: #999999 !important;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000 !important;
+        page-break-after: avoid;
+        margin-top: 0.5cm;
+        margin-bottom: 0.3cm;
+    }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+    h4 { font-size: 12pt; }
+    h5 { font-size: 11pt; }
+    h6 { font-size: 10pt; }
+
+    /* Paragraphs */
+    p {
+        margin: 0.2cm 0;
+        text-align: justify;
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Links */
+    a {
+        color: #000000 !important;
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #666666;
+    }
+
+    /* Remove URL for internal links */
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+
+    /* Comparison tables specific styling */
+    .comparison-table table {
+        font-size: 9pt;
+    }
+
+    .comparison-table th {
+        background: #e0e0e0 !important;
+    }
+
+    /* Roadmap styling */
+    .roadmap .phase {
+        border: 1pt solid #cccccc;
+        margin: 0.3cm 0;
+        padding: 0.3cm;
+        page-break-inside: avoid;
+    }
+
+    .phase h4 {
+        background: #f0f0f0 !important;
+        margin: -0.3cm -0.3cm 0.3cm -0.3cm;
+        padding: 0.2cm 0.3cm;
+        font-size: 12pt;
+    }
+
+    /* Architecture diagrams */
+    .service-diagram,
+    .communication-flow,
+    .pipeline-steps {
+        border: 1pt solid #cccccc;
+        padding: 0.3cm;
+        margin: 0.3cm 0;
+    }
+
+    .service-layer,
+    .flow-layer,
+    .step {
+        border: 1pt solid #eeeeee;
+        padding: 0.2cm;
+        margin: 0.2cm 0;
+        background: #fafafa !important;
+    }
+
+    /* Best practices grid */
+    .best-practices-grid {
+        display: block !important;
+    }
+
+    .practice-card {
+        margin-bottom: 0.5cm;
+        page-break-inside: avoid;
+    }
+
+    /* Final recommendations */
+    .final-recommendations {
+        border: 2pt solid #000000;
+        padding: 0.5cm;
+        margin: 0.5cm 0;
+        background: #f8f9fa !important;
+        page-break-inside: avoid;
+    }
+
+    .final-recommendations h3 {
+        margin-top: 0;
+        font-size: 14pt;
+        text-align: center;
+    }
+
+    /* Page breaks */
+    .section {
+        page-break-before: auto;
+    }
+
+    #executive-summary {
+        page-break-before: always;
+    }
+
+    #frontend,
+    #backend,
+    #scraping,
+    #ai-integration,
+    #integration,
+    #media-galleries,
+    #quality-assurance,
+    #recommendations {
+        page-break-before: always;
+    }
+
+    /* Avoid page breaks */
+    .code-example,
+    .highlight-box,
+    .recommendation-box,
+    .comparison-table,
+    .summary-card,
+    .pattern-card {
+        page-break-inside: avoid;
+    }
+
+    /* Table of contents (if added) */
+    .table-of-contents {
+        page-break-after: always;
+        border-bottom: 1pt solid #cccccc;
+        padding-bottom: 0.5cm;
+        margin-bottom: 0.5cm;
+    }
+
+    .table-of-contents h2 {
+        text-align: center;
+        margin-bottom: 0.5cm;
+    }
+
+    .toc-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .toc-list li {
+        margin-bottom: 0.2cm;
+        border-bottom: 1pt dotted #cccccc;
+        padding-bottom: 0.1cm;
+    }
+
+    .toc-link {
+        text-decoration: none;
+        color: #000000 !important;
+    }
+
+    .toc-link:after {
+        content: "";
+    }
+
+    /* Footer information */
+    .print-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1cm;
+        background: #f0f0f0;
+        border-top: 1pt solid #cccccc;
+        padding: 0.2cm;
+        font-size: 8pt;
+        text-align: center;
+        color: #666666;
+    }
+
+    /* Ensure proper spacing */
+    .research-subsection:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Print-specific utilities */
+    .print-only {
+        display: block !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    /* Optimize for black and white printing */
+    @media print and (monochrome) {
+        .hero {
+            background: #ffffff !important;
+            border: 2pt solid #000000;
+        }
+
+        .summary-card,
+        .pattern-card,
+        .tip-card,
+        .highlight-box,
+        .recommendation-box {
+            background: #ffffff !important;
+            border: 1pt solid #000000 !important;
+        }
+
+        pre {
+            background: #ffffff !important;
+            border: 1pt solid #000000 !important;
+        }
+
+        th {
+            background: #ffffff !important;
+            border: 1pt solid #000000 !important;
+            font-weight: bold;
+        }
+
+        tr.recommended {
+            background: #ffffff !important;
+            border: 2pt solid #000000 !important;
+        }
+    }
+}

@@ -1,0 +1,3327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe-Curator: Modern Web Development Research Report</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/syntax-highlighting.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1><i class="fas fa-code"></i> Vibe-Curator Research</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#executive-summary" class="nav-link">Executive Summary</a>
+                <a href="#frontend" class="nav-link">Frontend</a>
+                <a href="#backend" class="nav-link">Backend</a>
+                <a href="#scraping" class="nav-link">Data Scraping</a>
+                <a href="#ai-integration" class="nav-link">AI Integration</a>
+                <a href="#integration" class="nav-link">Full-Stack Integration</a>
+                <a href="#media-galleries" class="nav-link">Media Galleries</a>
+                <a href="#quality-assurance" class="nav-link">Quality Assurance</a>
+                <a href="#recommendations" class="nav-link">Recommendations</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Vibe-Curator</h1>
+                <h2 class="hero-subtitle">Modern Web Development Research Report</h2>
+                <p class="hero-description">
+                    Comprehensive technical research and recommendations for building a modern, 
+                    full-stack web application with React, Node.js, AI integration, and advanced media capabilities.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Research Areas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">31</span>
+                        <span class="stat-label">Technical Documents</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2024</span>
+                        <span class="stat-label">Latest Practices</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section id="executive-summary" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Executive Summary
+                </h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h3><i class="fab fa-react"></i> Frontend Architecture</h3>
+                        <p>Modern React.js application with Tailwind CSS, offline-first design, and advanced state management patterns.</p>
+                        <ul>
+                            <li>React 18+ with concurrent features</li>
+                            <li>Tailwind CSS for responsive design</li>
+                            <li>IndexedDB for offline storage</li>
+                            <li>Zustand for state management</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3><i class="fas fa-server"></i> Backend Infrastructure</h3>
+                        <p>Scalable Node.js backend with microservices architecture, containerized deployment, and cloud-native patterns.</p>
+                        <ul>
+                            <li>Express.js with TypeScript</li>
+                            <li>Microservices with Docker</li>
+                            <li>Kubernetes orchestration</li>
+                            <li>RESTful API design</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3><i class="fas fa-robot"></i> AI Integration</h3>
+                        <p>Advanced AI capabilities with OpenAI/Azure OpenAI integration for content curation and intelligent recommendations.</p>
+                        <ul>
+                            <li>OpenAI GPT-4 integration</li>
+                            <li>Azure OpenAI services</li>
+                            <li>Configurable AI parameters</li>
+                            <li>Content generation workflows</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3><i class="fas fa-images"></i> Rich Media</h3>
+                        <p>Advanced media galleries with animations, offline storage, and optimized performance for travel content.</p>
+                        <ul>
+                            <li>React gallery libraries</li>
+                            <li>Framer Motion animations</li>
+                            <li>Progressive image loading</li>
+                            <li>Offline media caching</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frontend Section -->
+        <section id="frontend" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fab fa-react"></i>
+                    Frontend Development
+                </h2>
+                
+                <!-- React Best Practices -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="react-practices">
+                        <i class="fas fa-chevron-right"></i>
+                        React Best Practices & Architecture
+                    </h3>
+                    <div class="collapsible-content" id="react-practices">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="react-overview">Overview</button>
+                                <button class="tab-button" data-tab="react-patterns">Patterns</button>
+                                <button class="tab-button" data-tab="react-performance">Performance</button>
+                            </div>
+                            <div class="tab-content active" id="react-overview">
+                                <h4>Modern React Development (2024)</h4>
+                                <div class="highlight-box">
+                                    <h5>Key Recommendations:</h5>
+                                    <ul>
+                                        <li><strong>React 18+</strong> with concurrent features and automatic batching</li>
+                                        <li><strong>TypeScript</strong> for type safety and better developer experience</li>
+                                        <li><strong>Functional Components</strong> with hooks for all new development</li>
+                                        <li><strong>Custom Hooks</strong> for reusable logic and state management</li>
+                                    </ul>
+                                </div>
+                                <div class="code-example">
+                                    <h5>Modern React Component Example:</h5>
+                                    <pre><code class="language-tsx">
+import React, { useState, useEffect, useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
+
+interface TravelPost {
+  id: string;
+  title: string;
+  content: string;
+  images: string[];
+  location: {
+    lat: number;
+    lng: number;
+    name: string;
+  };
+}
+
+export const TravelPostCard: React.FC<{ postId: string }> = ({ postId }) => {
+  const { data: post, isLoading, error } = useQuery({
+    queryKey: ['travel-post', postId],
+    queryFn: () => fetchTravelPost(postId),
+    staleTime: 5 * 60 * 1000, // 5 minutes
+  });
+
+  const formattedLocation = useMemo(() => {
+    if (!post?.location) return '';
+    return `${post.location.name} (${post.location.lat.toFixed(2)}, ${post.location.lng.toFixed(2)})`;
+  }, [post?.location]);
+
+  if (isLoading) return <div className="animate-pulse">Loading...</div>;
+  if (error) return <div className="text-red-500">Error loading post</div>;
+  if (!post) return null;
+
+  return (
+    <article className="bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="p-6">
+        <h2 className="text-xl font-bold mb-2">{post.title}</h2>
+        <p className="text-gray-600 mb-4">{formattedLocation}</p>
+        <div className="prose max-w-none">
+          {post.content}
+        </div>
+      </div>
+    </article>
+  );
+};
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="react-patterns">
+                                <h4>Architecture Patterns</h4>
+                                <div class="pattern-grid">
+                                    <div class="pattern-card">
+                                        <h5>Component Composition</h5>
+                                        <p>Favor composition over inheritance for flexible, reusable components.</p>
+                                        <div class="code-snippet">
+                                            <pre><code class="language-tsx">
+// Compound Component Pattern
+const TravelGallery = ({ children }) => (
+  <div className="travel-gallery">{children}</div>
+);
+
+TravelGallery.Header = ({ title }) => (
+  <h2 className="gallery-title">{title}</h2>
+);
+
+TravelGallery.Grid = ({ children }) => (
+  <div className="grid grid-cols-3 gap-4">{children}</div>
+);
+
+TravelGallery.Item = ({ image, alt }) => (
+  <img src={image} alt={alt} className="rounded-lg" />
+);
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                    <div class="pattern-card">
+                                        <h5>Custom Hooks</h5>
+                                        <p>Extract reusable logic into custom hooks for better code organization.</p>
+                                        <div class="code-snippet">
+                                            <pre><code class="language-tsx">
+// Custom hook for travel data
+const useTravelData = (location: string) => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    fetchTravelData(location)
+      .then(setData)
+      .finally(() => setLoading(false));
+  }, [location]);
+  
+  return { data, loading };
+};
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="react-performance">
+                                <h4>Performance Optimization</h4>
+                                <div class="performance-tips">
+                                    <div class="tip-card">
+                                        <h5><i class="fas fa-rocket"></i> Code Splitting</h5>
+                                        <p>Use React.lazy() and Suspense for route-based code splitting.</p>
+                                        <pre><code class="language-tsx">
+const TravelMap = React.lazy(() => import('./TravelMap'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading map...</div>}>
+      <TravelMap />
+    </Suspense>
+  );
+}
+                                        </code></pre>
+                                    </div>
+                                    <div class="tip-card">
+                                        <h5><i class="fas fa-memory"></i> Memoization</h5>
+                                        <p>Use React.memo, useMemo, and useCallback strategically.</p>
+                                        <pre><code class="language-tsx">
+const ExpensiveComponent = React.memo(({ data }) => {
+  const processedData = useMemo(() => 
+    processLargeDataset(data), [data]
+  );
+  
+  return <div>{processedData}</div>;
+});
+                                        </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- State Management -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="state-management">
+                        <i class="fas fa-chevron-right"></i>
+                        State Management Solutions
+                    </h3>
+                    <div class="collapsible-content" id="state-management">
+                        <div class="comparison-table">
+                            <h4>State Management Library Comparison</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Library</th>
+                                        <th>Bundle Size</th>
+                                        <th>Learning Curve</th>
+                                        <th>TypeScript Support</th>
+                                        <th>Recommendation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="recommended">
+                                        <td><strong>Zustand</strong></td>
+                                        <td>2.9kb</td>
+                                        <td>Low</td>
+                                        <td>Excellent</td>
+                                        <td><span class="badge recommended">Recommended</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Redux Toolkit</td>
+                                        <td>53kb</td>
+                                        <td>Medium</td>
+                                        <td>Good</td>
+                                        <td><span class="badge alternative">Alternative</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jotai</td>
+                                        <td>13kb</td>
+                                        <td>Medium</td>
+                                        <td>Excellent</td>
+                                        <td><span class="badge alternative">Alternative</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Valtio</td>
+                                        <td>16kb</td>
+                                        <td>Low</td>
+                                        <td>Good</td>
+                                        <td><span class="badge consider">Consider</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="recommendation-box">
+                            <h4><i class="fas fa-star"></i> Recommended: Zustand</h4>
+                            <p>For Vibe-Curator, Zustand is recommended due to its simplicity, small bundle size, and excellent TypeScript support.</p>
+                            <div class="code-example">
+                                <pre><code class="language-tsx">
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+
+interface TravelStore {
+  posts: TravelPost[];
+  favorites: string[];
+  addPost: (post: TravelPost) => void;
+  toggleFavorite: (postId: string) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}
+
+export const useTravelStore = create<TravelStore>()(
+  persist(
+    (set, get) => ({
+      posts: [],
+      favorites: [],
+      searchQuery: '',
+      
+      addPost: (post) => 
+        set((state) => ({ posts: [...state.posts, post] })),
+      
+      toggleFavorite: (postId) =>
+        set((state) => ({
+          favorites: state.favorites.includes(postId)
+            ? state.favorites.filter(id => id !== postId)
+            : [...state.favorites, postId]
+        })),
+      
+      setSearchQuery: (query) => set({ searchQuery: query }),
+    }),
+    {
+      name: 'travel-storage',
+      partialize: (state) => ({ 
+        favorites: state.favorites,
+        searchQuery: state.searchQuery 
+      }),
+    }
+  )
+);
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="tailwind-design">
+                        <i class="fas fa-chevron-right"></i>
+                        Tailwind CSS & Responsive Design
+                    </h3>
+                    <div class="collapsible-content" id="tailwind-design">
+                        <div class="design-system">
+                            <h4>Design System Configuration</h4>
+                            <div class="config-example">
+                                <pre><code class="language-javascript">
+// tailwind.config.js
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          500: '#3b82f6',
+          900: '#1e3a8a',
+        },
+        travel: {
+          sunset: '#ff6b6b',
+          ocean: '#4ecdc4',
+          forest: '#45b7d1',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="responsive-examples">
+                            <h4>Responsive Design Patterns</h4>
+                            <div class="pattern-showcase">
+                                <div class="pattern-item">
+                                    <h5>Mobile-First Grid</h5>
+                                    <pre><code class="language-html">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+  <div class="travel-card">...</div>
+  <div class="travel-card">...</div>
+  <div class="travel-card">...</div>
+</div>
+                                    </code></pre>
+                                </div>
+                                <div class="pattern-item">
+                                    <h5>Responsive Typography</h5>
+                                    <pre><code class="language-html">
+<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display">
+  Travel Adventures
+</h1>
+<p class="text-sm sm:text-base md:text-lg leading-relaxed">
+  Discover amazing destinations...
+</p>
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offline-First Design -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="offline-first">
+                        <i class="fas fa-chevron-right"></i>
+                        Offline-First Architecture with IndexedDB
+                    </h3>
+                    <div class="collapsible-content" id="offline-first">
+                        <div class="offline-strategy">
+                            <h4>Offline Storage Strategy</h4>
+                            <div class="strategy-diagram">
+                                <div class="storage-layer">
+                                    <h5><i class="fas fa-database"></i> IndexedDB</h5>
+                                    <p>Primary offline storage for travel posts, images, and user data</p>
+                                </div>
+                                <div class="storage-layer">
+                                    <h5><i class="fas fa-memory"></i> Memory Cache</h5>
+                                    <p>In-memory caching for frequently accessed data</p>
+                                </div>
+                                <div class="storage-layer">
+                                    <h5><i class="fas fa-cloud"></i> Service Worker</h5>
+                                    <p>Network request caching and background sync</p>
+                                </div>
+                            </div>
+                            
+                            <div class="implementation-example">
+                                <h5>IndexedDB Implementation</h5>
+                                <pre><code class="language-typescript">
+// db/travelDB.ts
+import Dexie, { Table } from 'dexie';
+
+export interface TravelPost {
+  id?: number;
+  title: string;
+  content: string;
+  images: string[];
+  location: {
+    lat: number;
+    lng: number;
+    name: string;
+  };
+  createdAt: Date;
+  syncStatus: 'synced' | 'pending' | 'failed';
+}
+
+export class TravelDB extends Dexie {
+  posts!: Table<TravelPost>;
+  images!: Table<{ id?: number; postId: number; blob: Blob; url: string }>;
+
+  constructor() {
+    super('TravelDB');
+    this.version(1).stores({
+      posts: '++id, title, createdAt, syncStatus',
+      images: '++id, postId, url'
+    });
+  }
+}
+
+export const db = new TravelDB();
+
+// Service for offline operations
+export class OfflineTravelService {
+  async saveTravelPost(post: Omit<TravelPost, 'id'>) {
+    const id = await db.posts.add({
+      ...post,
+      syncStatus: 'pending'
+    });
+    
+    // Schedule background sync
+    if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration.prototype) {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.sync.register('sync-travel-posts');
+    }
+    
+    return id;
+  }
+
+  async getTravelPosts(limit = 20, offset = 0) {
+    return await db.posts
+      .orderBy('createdAt')
+      .reverse()
+      .offset(offset)
+      .limit(limit)
+      .toArray();
+  }
+
+  async searchPosts(query: string) {
+    return await db.posts
+      .filter(post => 
+        post.title.toLowerCase().includes(query.toLowerCase()) ||
+        post.content.toLowerCase().includes(query.toLowerCase())
+      )
+      .toArray();
+  }
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend Section -->
+        <section id="backend" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-server"></i>
+                    Backend Development
+                </h2>
+                
+                <!-- Framework Comparison -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="framework-comparison">
+                        <i class="fas fa-chevron-right"></i>
+                        Node.js Framework Comparison: Express vs Fastify
+                    </h3>
+                    <div class="collapsible-content" id="framework-comparison">
+                        <div class="comparison-table">
+                            <h4>Performance Benchmarks (2024)</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Framework</th>
+                                        <th>Requests/Second</th>
+                                        <th>Performance Advantage</th>
+                                        <th>Memory Usage</th>
+                                        <th>Recommendation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="recommended">
+                                        <td><strong>Fastify</strong></td>
+                                        <td>~114,195</td>
+                                        <td>90% better</td>
+                                        <td>Lower</td>
+                                        <td><span class="badge recommended">Recommended</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Express</td>
+                                        <td>~1,458</td>
+                                        <td>Baseline</td>
+                                        <td>Higher</td>
+                                        <td><span class="badge alternative">Legacy Support</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="recommendation-box">
+                            <h4><i class="fas fa-star"></i> Recommended: Fastify</h4>
+                            <p>Fastify delivers approximately 78x more requests per second than Express, making it ideal for high-performance applications like Vibe-Curator.</p>
+                            <div class="code-example">
+                                <h5>Fastify Server Setup:</h5>
+                                <pre><code class="language-javascript">
+// server.js
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import helmet from '@fastify/helmet';
+import rateLimit from '@fastify/rate-limit';
+
+const fastify = Fastify({
+  logger: {
+    level: process.env.LOG_LEVEL || 'info',
+    transport: {
+      target: 'pino-pretty',
+      options: {
+        colorize: true
+      }
+    }
+  }
+});
+
+// Security plugins
+await fastify.register(helmet, {
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      scriptSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "https:"]
+    }
+  }
+});
+
+await fastify.register(cors, {
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000']
+});
+
+await fastify.register(rateLimit, {
+  max: 100,
+  timeWindow: '1 minute'
+});
+
+// Travel posts routes
+fastify.register(async function (fastify) {
+  fastify.get('/api/travel-posts', async (request, reply) => {
+    const { page = 1, limit = 20, search } = request.query;
+    
+    try {
+      const posts = await getTravelPosts({
+        page: parseInt(page),
+        limit: parseInt(limit),
+        search
+      });
+      
+      return {
+        success: true,
+        data: posts,
+        pagination: {
+          page: parseInt(page),
+          limit: parseInt(limit),
+          total: posts.total
+        }
+      };
+    } catch (error) {
+      fastify.log.error(error);
+      reply.code(500).send({
+        success: false,
+        error: 'Failed to fetch travel posts'
+      });
+    }
+  });
+});
+
+const start = async () => {
+  try {
+    await fastify.listen({ 
+      port: process.env.PORT || 3001,
+      host: '0.0.0.0'
+    });
+    fastify.log.info('Server listening on port 3001');
+  } catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
+  }
+};
+
+start();
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESTful API Design -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="api-design">
+                        <i class="fas fa-chevron-right"></i>
+                        RESTful API Design Principles
+                    </h3>
+                    <div class="collapsible-content" id="api-design">
+                        <div class="pattern-grid">
+                            <div class="pattern-card">
+                                <h5>Resource-Based URLs</h5>
+                                <p>Use nouns for resources, not verbs for actions.</p>
+                                <div class="code-snippet">
+                                    <pre><code class="language-javascript">
+// Good: Resource-based
+GET    /api/travel-posts
+POST   /api/travel-posts
+GET    /api/travel-posts/:id
+PUT    /api/travel-posts/:id
+DELETE /api/travel-posts/:id
+
+// Bad: Action-based
+GET    /api/getTravelPosts
+POST   /api/createTravelPost
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="pattern-card">
+                                <h5>HTTP Status Codes</h5>
+                                <p>Use appropriate HTTP status codes for different scenarios.</p>
+                                <div class="code-snippet">
+                                    <pre><code class="language-javascript">
+// Success responses
+200 - OK (GET, PUT)
+201 - Created (POST)
+204 - No Content (DELETE)
+
+// Client error responses
+400 - Bad Request
+401 - Unauthorized
+403 - Forbidden
+404 - Not Found
+422 - Unprocessable Entity
+
+// Server error responses
+500 - Internal Server Error
+503 - Service Unavailable
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h5>API Versioning Strategy</h5>
+                            <ul>
+                                <li><strong>URL Versioning:</strong> /api/v1/travel-posts</li>
+                                <li><strong>Header Versioning:</strong> Accept: application/vnd.api+json;version=1</li>
+                                <li><strong>Semantic Versioning:</strong> Follow semver for API versions</li>
+                                <li><strong>Deprecation Policy:</strong> Support previous version for 6 months</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microservices Architecture -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="microservices">
+                        <i class="fas fa-chevron-right"></i>
+                        Microservices Architecture Patterns
+                    </h3>
+                    <div class="collapsible-content" id="microservices">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="microservices-overview">Architecture</button>
+                                <button class="tab-button" data-tab="service-communication">Communication</button>
+                                <button class="tab-button" data-tab="data-management">Data Management</button>
+                            </div>
+                            <div class="tab-content active" id="microservices-overview">
+                                <h4>Vibe-Curator Microservices Architecture</h4>
+                                <div class="service-diagram">
+                                    <div class="service-layer">
+                                        <h5><i class="fas fa-globe"></i> API Gateway</h5>
+                                        <p>Single entry point, routing, authentication, rate limiting</p>
+                                    </div>
+                                    <div class="service-layer">
+                                        <h5><i class="fas fa-map-marked-alt"></i> Travel Content Service</h5>
+                                        <p>Manages travel posts, locations, and content metadata</p>
+                                    </div>
+                                    <div class="service-layer">
+                                        <h5><i class="fas fa-robot"></i> AI Curation Service</h5>
+                                        <p>OpenAI integration, content analysis, recommendations</p>
+                                    </div>
+                                    <div class="service-layer">
+                                        <h5><i class="fas fa-images"></i> Media Processing Service</h5>
+                                        <p>Image optimization, gallery management, CDN integration</p>
+                                    </div>
+                                    <div class="service-layer">
+                                        <h5><i class="fas fa-spider"></i> Web Scraping Service</h5>
+                                        <p>Apify integration, content extraction, data validation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="service-communication">
+                                <h4>Inter-Service Communication</h4>
+                                <div class="communication-patterns">
+                                    <div class="pattern-item">
+                                        <h5>Synchronous Communication</h5>
+                                        <p>HTTP/REST for real-time requests</p>
+                                        <pre><code class="language-javascript">
+// Service-to-service HTTP call
+const response = await fetch(`${AI_SERVICE_URL}/api/analyze-content`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${serviceToken}`
+  },
+  body: JSON.stringify({ content, type: 'travel-post' })
+});
+                                        </code></pre>
+                                    </div>
+                                    <div class="pattern-item">
+                                        <h5>Asynchronous Communication</h5>
+                                        <p>Message queues for background processing</p>
+                                        <pre><code class="language-javascript">
+// Redis pub/sub for async communication
+import Redis from 'ioredis';
+
+const redis = new Redis(process.env.REDIS_URL);
+
+// Publisher (Travel Content Service)
+await redis.publish('content.created', JSON.stringify({
+  postId: newPost.id,
+  content: newPost.content,
+  timestamp: new Date().toISOString()
+}));
+
+// Subscriber (AI Curation Service)
+redis.subscribe('content.created');
+redis.on('message', async (channel, message) => {
+  const data = JSON.parse(message);
+  await processContentForAI(data);
+});
+                                        </code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="data-management">
+                                <h4>Database per Service Pattern</h4>
+                                <div class="database-strategy">
+                                    <div class="db-service">
+                                        <h5>Travel Content Service</h5>
+                                        <p><strong>PostgreSQL</strong> - Relational data for posts, users, locations</p>
+                                    </div>
+                                    <div class="db-service">
+                                        <h5>AI Curation Service</h5>
+                                        <p><strong>MongoDB</strong> - Document storage for AI analysis results</p>
+                                    </div>
+                                    <div class="db-service">
+                                        <h5>Media Processing Service</h5>
+                                        <p><strong>S3 + Redis</strong> - Object storage + metadata caching</p>
+                                    </div>
+                                    <div class="db-service">
+                                        <h5>Web Scraping Service</h5>
+                                        <p><strong>MongoDB</strong> - Flexible schema for scraped content</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docker & Kubernetes -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="containerization">
+                        <i class="fas fa-chevron-right"></i>
+                        Containerization & Orchestration
+                    </h3>
+                    <div class="collapsible-content" id="containerization">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="docker-setup">Docker</button>
+                                <button class="tab-button" data-tab="kubernetes-deployment">Kubernetes</button>
+                            </div>
+                            <div class="tab-content active" id="docker-setup">
+                                <h4>Docker Configuration</h4>
+                                <div class="code-example">
+                                    <h5>Multi-stage Dockerfile:</h5>
+                                    <pre><code class="language-dockerfile">
+# Build stage
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production && npm cache clean --force
+
+# Production stage
+FROM node:20-alpine AS production
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+WORKDIR /app
+
+# Copy built application
+COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
+COPY --chown=nextjs:nodejs . .
+
+# Security hardening
+RUN apk add --no-cache dumb-init
+RUN chmod +x /usr/bin/dumb-init
+
+USER nextjs
+
+EXPOSE 3001
+
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "server.js"]
+                                    </code></pre>
+                                </div>
+                                
+                                <div class="code-example">
+                                    <h5>Docker Compose for Development:</h5>
+                                    <pre><code class="language-yaml">
+version: '3.8'
+
+services:
+  travel-content-service:
+    build: ./services/travel-content
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://user:pass@postgres:5432/travel_content
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./services/travel-content:/app
+      - /app/node_modules
+
+  ai-curation-service:
+    build: ./services/ai-curation
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=development
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MONGODB_URL=mongodb://mongo:27017/ai_curation
+    depends_on:
+      - mongo
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=travel_content
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  postgres_data:
+  redis_data:
+  mongo_data:
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="kubernetes-deployment">
+                                <h4>Kubernetes Deployment Strategy</h4>
+                                <div class="code-example">
+                                    <h5>Service Deployment:</h5>
+                                    <pre><code class="language-yaml">
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-content-service
+  labels:
+    app: travel-content-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: travel-content-service
+  template:
+    metadata:
+      labels:
+        app: travel-content-service
+    spec:
+      containers:
+      - name: travel-content-service
+        image: vibe-curator/travel-content:latest
+        ports:
+        - containerPort: 3001
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-secret
+              key: url
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3001
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 3001
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: travel-content-service
+spec:
+  selector:
+    app: travel-content-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3001
+  type: ClusterIP
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Scraping Section -->
+        <section id="scraping" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-spider"></i>
+                    Data Scraping & Content Extraction
+                </h2>
+                
+                <!-- Apify SDK Integration -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="apify-integration">
+                        <i class="fas fa-chevron-right"></i>
+                        Apify SDK Integration
+                    </h3>
+                    <div class="collapsible-content" id="apify-integration">
+                        <div class="highlight-box">
+                            <h5>Key Benefits of Apify for Vibe-Curator:</h5>
+                            <ul>
+                                <li><strong>Scalable Infrastructure:</strong> Cloud-based scraping with auto-scaling</li>
+                                <li><strong>Pre-built Actors:</strong> Ready-to-use scrapers for major platforms</li>
+                                <li><strong>Compliance Features:</strong> Built-in rate limiting and ethical scraping</li>
+                                <li><strong>Data Processing:</strong> Automatic data cleaning and transformation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="code-example">
+                            <h5>Apify SDK Implementation:</h5>
+                            <pre><code class="language-javascript">
+import { ApifyApi } from 'apify-client';
+import { Actor } from 'apify';
+
+class TravelContentScraper {
+  constructor() {
+    this.apifyClient = new ApifyApi({
+      token: process.env.APIFY_API_TOKEN,
+    });
+  }
+
+  async scrapeInstagramTravelPosts(hashtags, maxPosts = 100) {
+    try {
+      const input = {
+        hashtags: hashtags,
+        resultsLimit: maxPosts,
+        addParentData: false,
+        enhanceUserInformation: true,
+        isUserTaggedFeedURL: false,
+        onlyPostsWithLocation: true, // Focus on travel posts with location
+        scrapePostsUntilDate: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+      };
+
+      const run = await this.apifyClient.actor('apify/instagram-hashtag-scraper').call(input);
+      const { items } = await this.apifyClient.dataset(run.defaultDatasetId).listItems();
+      
+      return this.processInstagramData(items);
+    } catch (error) {
+      console.error('Instagram scraping failed:', error);
+      throw new Error('Failed to scrape Instagram content');
+    }
+  }
+
+  async scrapeTravelBlogs(urls) {
+    const input = {
+      startUrls: urls.map(url => ({ url })),
+      maxRequestsPerCrawl: 1000,
+      maxConcurrency: 10,
+      requestHandlerTimeoutSecs: 60,
+      customData: {
+        extractImages: true,
+        extractLocation: true,
+        extractTravelTips: true
+      }
+    };
+
+    const run = await this.apifyClient.actor('apify/web-scraper').call(input);
+    const { items } = await this.apifyClient.dataset(run.defaultDatasetId).listItems();
+    
+    return this.processBlogData(items);
+  }
+
+  processInstagramData(items) {
+    return items.map(item => ({
+      id: item.id,
+      caption: item.caption,
+      images: item.displayUrl ? [item.displayUrl] : [],
+      location: item.locationName || null,
+      coordinates: item.lat && item.lng ? { lat: item.lat, lng: item.lng } : null,
+      hashtags: item.hashtags || [],
+      timestamp: new Date(item.timestamp),
+      engagement: {
+        likes: item.likesCount || 0,
+        comments: item.commentsCount || 0
+      },
+      source: 'instagram',
+      author: {
+        username: item.ownerUsername,
+        fullName: item.ownerFullName
+      }
+    }));
+  }
+
+  processBlogData(items) {
+    return items.map(item => ({
+      title: item.title || this.extractTitleFromContent(item.text),
+      content: item.text,
+      url: item.url,
+      images: item.images || [],
+      publishedDate: this.extractDateFromContent(item.text),
+      location: this.extractLocationFromContent(item.text),
+      source: 'blog',
+      domain: new URL(item.url).hostname
+    }));
+  }
+
+  extractTitleFromContent(text) {
+    // Extract title from content using regex or NLP
+    const titleMatch = text.match(/^(.{1,100})/);
+    return titleMatch ? titleMatch[1].trim() : 'Untitled Travel Post';
+  }
+
+  extractLocationFromContent(text) {
+    // Use regex or NLP to extract location mentions
+    const locationPatterns = [
+      /(?:in|at|visiting|traveled to)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/g,
+      /([A-Z][a-z]+,\s*[A-Z][a-z]+)/g
+    ];
+    
+    for (const pattern of locationPatterns) {
+      const matches = text.match(pattern);
+      if (matches) {
+        return matches[0].replace(/^(in|at|visiting|traveled to)\s+/i, '');
+      }
+    }
+    return null;
+  }
+}
+
+export default TravelContentScraper;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Compliance -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="compliance">
+                        <i class="fas fa-chevron-right"></i>
+                        Social Media Compliance & Ethics
+                    </h3>
+                    <div class="collapsible-content" id="compliance">
+                        <div class="compliance-guidelines">
+                            <div class="guideline-card">
+                                <h5><i class="fas fa-shield-alt"></i> Rate Limiting</h5>
+                                <p>Implement respectful rate limiting to avoid overwhelming target servers.</p>
+                                <ul>
+                                    <li>Maximum 1 request per second for Instagram</li>
+                                    <li>Maximum 5 requests per second for blog sites</li>
+                                    <li>Implement exponential backoff on errors</li>
+                                    <li>Use Apify's built-in rate limiting features</li>
+                                </ul>
+                            </div>
+                            <div class="guideline-card">
+                                <h5><i class="fas fa-user-shield"></i> Privacy Protection</h5>
+                                <p>Respect user privacy and data protection regulations.</p>
+                                <ul>
+                                    <li>Only scrape publicly available content</li>
+                                    <li>Anonymize personal information</li>
+                                    <li>Implement data retention policies</li>
+                                    <li>Provide opt-out mechanisms</li>
+                                </ul>
+                            </div>
+                            <div class="guideline-card">
+                                <h5><i class="fas fa-gavel"></i> Legal Compliance</h5>
+                                <p>Ensure compliance with platform terms of service and legal requirements.</p>
+                                <ul>
+                                    <li>Review and comply with robots.txt</li>
+                                    <li>Respect platform API terms of service</li>
+                                    <li>Implement GDPR compliance measures</li>
+                                    <li>Regular legal review of scraping practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel Blog Extraction -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="blog-extraction">
+                        <i class="fas fa-chevron-right"></i>
+                        Travel Blog Content Extraction
+                    </h3>
+                    <div class="collapsible-content" id="blog-extraction">
+                        <div class="extraction-strategy">
+                            <h4>Content Extraction Pipeline</h4>
+                            <div class="pipeline-steps">
+                                <div class="step">
+                                    <h5>1. Site Discovery</h5>
+                                    <p>Identify high-quality travel blogs and content sources</p>
+                                </div>
+                                <div class="step">
+                                    <h5>2. Content Extraction</h5>
+                                    <p>Extract structured data from blog posts using Apify</p>
+                                </div>
+                                <div class="step">
+                                    <h5>3. Data Cleaning</h5>
+                                    <p>Clean and normalize extracted content</p>
+                                </div>
+                                <div class="step">
+                                    <h5>4. Quality Assessment</h5>
+                                    <p>Use AI to assess content quality and relevance</p>
+                                </div>
+                                <div class="step">
+                                    <h5>5. Storage & Indexing</h5>
+                                    <p>Store processed content with proper indexing</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-example">
+                            <h5>Blog Content Processor:</h5>
+                            <pre><code class="language-javascript">
+class TravelBlogProcessor {
+  constructor(openaiClient) {
+    this.openaiClient = openaiClient;
+  }
+
+  async processExtractedContent(rawContent) {
+    const cleanedContent = await this.cleanContent(rawContent);
+    const qualityScore = await this.assessQuality(cleanedContent);
+    
+    if (qualityScore < 0.7) {
+      return null; // Skip low-quality content
+    }
+
+    const structuredData = await this.extractStructuredData(cleanedContent);
+    return {
+      ...structuredData,
+      qualityScore,
+      processedAt: new Date().toISOString()
+    };
+  }
+
+  async cleanContent(content) {
+    // Remove ads, navigation, and irrelevant content
+    const cleaned = content
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    return cleaned;
+  }
+
+  async assessQuality(content) {
+    try {
+      const response = await this.openaiClient.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{
+          role: "system",
+          content: "You are a content quality assessor. Rate the quality of travel content from 0-1 based on informativeness, readability, and travel value."
+        }, {
+          role: "user",
+          content: `Rate this travel content: ${content.substring(0, 1000)}...`
+        }],
+        max_tokens: 50
+      });
+
+      const rating = parseFloat(response.choices[0].message.content.match(/\d+\.?\d*/)?.[0] || '0');
+      return Math.min(Math.max(rating, 0), 1);
+    } catch (error) {
+      console.error('Quality assessment failed:', error);
+      return 0.5; // Default neutral score
+    }
+  }
+
+  async extractStructuredData(content) {
+    try {
+      const response = await this.openaiClient.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{
+          role: "system",
+          content: "Extract structured travel information from content. Return JSON with title, location, activities, tips, and summary."
+        }, {
+          role: "user",
+          content: content.substring(0, 2000)
+        }],
+        max_tokens: 500
+      });
+
+      return JSON.parse(response.choices[0].message.content);
+    } catch (error) {
+      console.error('Structured data extraction failed:', error);
+      return {
+        title: this.extractTitle(content),
+        location: this.extractLocation(content),
+        summary: content.substring(0, 200) + '...'
+      };
+    }
+  }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Integration Section -->
+        <section id="ai-integration" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-robot"></i>
+                    AI Integration & Content Curation
+                </h2>
+                
+                <!-- OpenAI Integration Patterns -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="openai-integration">
+                        <i class="fas fa-chevron-right"></i>
+                        OpenAI API Integration Patterns
+                    </h3>
+                    <div class="collapsible-content" id="openai-integration">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="openai-setup">Setup & Authentication</button>
+                                <button class="tab-button" data-tab="content-analysis">Content Analysis</button>
+                                <button class="tab-button" data-tab="recommendations">Recommendations</button>
+                            </div>
+                            <div class="tab-content active" id="openai-setup">
+                                <h4>OpenAI Integration Setup</h4>
+                                <div class="code-example">
+                                    <h5>OpenAI Client Configuration:</h5>
+                                    <pre><code class="language-javascript">
+import OpenAI from 'openai';
+import rateLimit from 'express-rate-limit';
+
+class AIContentCurator {
+  constructor() {
+    this.openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+      organization: process.env.OPENAI_ORG_ID,
+    });
+    
+    // Rate limiting for API calls
+    this.rateLimiter = rateLimit({
+      windowMs: 60 * 1000, // 1 minute
+      max: 60, // 60 requests per minute
+      message: 'Too many AI requests, please try again later.'
+    });
+  }
+
+  async analyzeContent(content, contentType = 'travel-post') {
+    try {
+      const response = await this.openai.chat.completions.create({
+        model: "gpt-4",
+        messages: [
+          {
+            role: "system",
+            content: `You are a travel content curator. Analyze the following ${contentType} and provide insights about location, activities, sentiment, and travel value.`
+          },
+          {
+            role: "user",
+            content: content
+          }
+        ],
+        max_tokens: 500,
+        temperature: 0.3,
+        functions: [
+          {
+            name: "analyze_travel_content",
+            description: "Analyze travel content and extract structured information",
+            parameters: {
+              type: "object",
+              properties: {
+                location: {
+                  type: "object",
+                  properties: {
+                    name: { type: "string" },
+                    country: { type: "string" },
+                    coordinates: {
+                      type: "object",
+                      properties: {
+                        lat: { type: "number" },
+                        lng: { type: "number" }
+                      }
+                    }
+                  }
+                },
+                activities: {
+                  type: "array",
+                  items: { type: "string" }
+                },
+                sentiment: {
+                  type: "string",
+                  enum: ["positive", "neutral", "negative"]
+                },
+                travelValue: {
+                  type: "number",
+                  minimum: 0,
+                  maximum: 10
+                },
+                tags: {
+                  type: "array",
+                  items: { type: "string" }
+                },
+                summary: { type: "string" }
+              },
+              required: ["location", "activities", "sentiment", "travelValue", "summary"]
+            }
+          }
+        ],
+        function_call: { name: "analyze_travel_content" }
+      });
+
+      const analysis = JSON.parse(response.choices[0].message.function_call.arguments);
+      return {
+        ...analysis,
+        confidence: this.calculateConfidence(response),
+        processedAt: new Date().toISOString()
+      };
+    } catch (error) {
+      console.error('Content analysis failed:', error);
+      throw new Error('Failed to analyze content with AI');
+    }
+  }
+
+  async generateRecommendations(userPreferences, travelHistory) {
+    const prompt = this.buildRecommendationPrompt(userPreferences, travelHistory);
+    
+    try {
+      const response = await this.openai.chat.completions.create({
+        model: "gpt-4",
+        messages: [
+          {
+            role: "system",
+            content: "You are a personalized travel recommendation engine. Generate tailored travel suggestions based on user preferences and history."
+          },
+          {
+            role: "user",
+            content: prompt
+          }
+        ],
+        max_tokens: 800,
+        temperature: 0.7
+      });
+
+      return this.parseRecommendations(response.choices[0].message.content);
+    } catch (error) {
+      console.error('Recommendation generation failed:', error);
+      throw new Error('Failed to generate AI recommendations');
+    }
+  }
+
+  calculateConfidence(response) {
+    // Calculate confidence based on response characteristics
+    const usage = response.usage;
+    const completionRatio = usage.completion_tokens / usage.total_tokens;
+    return Math.min(completionRatio * 2, 1); // Normalize to 0-1
+  }
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="content-analysis">
+                                <h4>Content Analysis Pipeline</h4>
+                                <div class="analysis-flow">
+                                    <div class="flow-step">
+                                        <h5>1. Content Preprocessing</h5>
+                                        <p>Clean and prepare content for AI analysis</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <h5>2. Location Extraction</h5>
+                                        <p>Identify geographical locations and coordinates</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <h5>3. Activity Recognition</h5>
+                                        <p>Extract travel activities and experiences</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <h5>4. Sentiment Analysis</h5>
+                                        <p>Determine emotional tone and travel satisfaction</p>
+                                    </div>
+                                    <div class="flow-step">
+                                        <h5>5. Quality Scoring</h5>
+                                        <p>Rate content quality and travel value</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="recommendations">
+                                <h4>Personalized Recommendations</h4>
+                                <div class="recommendation-engine">
+                                    <div class="engine-component">
+                                        <h5>User Preference Analysis</h5>
+                                        <ul>
+                                            <li>Travel style preferences (adventure, luxury, budget)</li>
+                                            <li>Activity preferences (outdoor, cultural, culinary)</li>
+                                            <li>Climate and season preferences</li>
+                                            <li>Duration and budget constraints</li>
+                                        </ul>
+                                    </div>
+                                    <div class="engine-component">
+                                        <h5>Content Matching Algorithm</h5>
+                                        <ul>
+                                            <li>Semantic similarity matching</li>
+                                            <li>Location-based recommendations</li>
+                                            <li>Activity-based filtering</li>
+                                            <li>Seasonal relevance scoring</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure OpenAI Comparison -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="azure-comparison">
+                        <i class="fas fa-chevron-right"></i>
+                        OpenAI vs Azure OpenAI Comparison
+                    </h3>
+                    <div class="collapsible-content" id="azure-comparison">
+                        <div class="comparison-table">
+                            <h4>Service Comparison (2024)</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>OpenAI Direct</th>
+                                        <th>Azure OpenAI</th>
+                                        <th>Recommendation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Enterprise Security</strong></td>
+                                        <td>Standard</td>
+                                        <td>Enterprise-grade</td>
+                                        <td>Azure for enterprise</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Data Privacy</strong></td>
+                                        <td>Shared infrastructure</td>
+                                        <td>Private deployment</td>
+                                        <td>Azure for sensitive data</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Model Availability</strong></td>
+                                        <td>Latest models first</td>
+                                        <td>Delayed releases</td>
+                                        <td>OpenAI for cutting-edge</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Pricing</strong></td>
+                                        <td>Pay-per-use</td>
+                                        <td>Committed use discounts</td>
+                                        <td>Azure for high volume</td>
+                                    </tr>
+                                    <tr class="recommended">
+                                        <td><strong>Integration</strong></td>
+                                        <td>Direct API</td>
+                                        <td>Azure ecosystem</td>
+                                        <td><span class="badge recommended">Hybrid Approach</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="recommendation-box">
+                            <h4><i class="fas fa-star"></i> Recommended: Hybrid Approach</h4>
+                            <p>Use Azure OpenAI for production workloads requiring enterprise security, and OpenAI direct for development and experimentation with latest models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parameter Management -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="parameter-management">
+                        <i class="fas fa-chevron-right"></i>
+                        AI Parameter Management & Optimization
+                    </h3>
+                    <div class="collapsible-content" id="parameter-management">
+                        <div class="parameter-config">
+                            <h4>Configurable AI Parameters</h4>
+                            <div class="config-grid">
+                                <div class="config-card">
+                                    <h5>Content Analysis Parameters</h5>
+                                    <ul>
+                                        <li><strong>Temperature:</strong> 0.3 (focused analysis)</li>
+                                        <li><strong>Max Tokens:</strong> 500 (detailed responses)</li>
+                                        <li><strong>Top P:</strong> 0.9 (balanced creativity)</li>
+                                        <li><strong>Frequency Penalty:</strong> 0.2 (reduce repetition)</li>
+                                    </ul>
+                                </div>
+                                <div class="config-card">
+                                    <h5>Recommendation Parameters</h5>
+                                    <ul>
+                                        <li><strong>Temperature:</strong> 0.7 (creative suggestions)</li>
+                                        <li><strong>Max Tokens:</strong> 800 (comprehensive recommendations)</li>
+                                        <li><strong>Top P:</strong> 0.95 (diverse options)</li>
+                                        <li><strong>Presence Penalty:</strong> 0.3 (encourage variety)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Stack Integration Section -->
+        <section id="integration" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-plug"></i>
+                    Full-Stack Integration
+                </h2>
+                
+                <!-- Integration Patterns -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="integration-patterns">
+                        <i class="fas fa-chevron-right"></i>
+                        Full-Stack Integration Patterns
+                    </h3>
+                    <div class="collapsible-content" id="integration-patterns">
+                        <div class="integration-architecture">
+                            <h4>Frontend-Backend Communication</h4>
+                            <div class="communication-flow">
+                                <div class="flow-layer">
+                                    <h5>React Frontend</h5>
+                                    <p>User interface, state management, offline capabilities</p>
+                                </div>
+                                <div class="flow-arrow">↕</div>
+                                <div class="flow-layer">
+                                    <h5>API Gateway</h5>
+                                    <p>Request routing, authentication, rate limiting</p>
+                                </div>
+                                <div class="flow-arrow">↕</div>
+                                <div class="flow-layer">
+                                    <h5>Microservices</h5>
+                                    <p>Business logic, data processing, AI integration</p>
+                                </div>
+                                <div class="flow-arrow">↕</div>
+                                <div class="flow-layer">
+                                    <h5>Data Layer</h5>
+                                    <p>Databases, caching, external APIs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-example">
+                            <h5>API Integration Hook:</h5>
+                            <pre><code class="language-typescript">
+// hooks/useAPI.ts
+import { useState, useEffect } from 'react';
+import { useTravelStore } from '../store/travelStore';
+
+interface APIOptions {
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+  body?: any;
+  headers?: Record<string, string>;
+  cache?: boolean;
+  offline?: boolean;
+}
+
+export function useAPI<T>(endpoint: string, options: APIOptions = {}) {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const { isOnline } = useTravelStore();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        // Check offline mode
+        if (!isOnline && options.offline) {
+          const cachedData = await getCachedData<T>(endpoint);
+          if (cachedData) {
+            setData(cachedData);
+            return;
+          }
+        }
+
+        const response = await fetch(`${process.env.REACT_APP_API_URL}${endpoint}`, {
+          method: options.method || 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${getAuthToken()}`,
+            ...options.headers
+          },
+          body: options.body ? JSON.stringify(options.body) : undefined
+        });
+
+        if (!response.ok) {
+          throw new Error(`API Error: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        setData(result.data);
+
+        // Cache successful responses
+        if (options.cache && response.ok) {
+          await cacheData(endpoint, result.data);
+        }
+
+      } catch (err) {
+        const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+        setError(errorMessage);
+        
+        // Try to load cached data on error
+        if (options.offline) {
+          const cachedData = await getCachedData<T>(endpoint);
+          if (cachedData) {
+            setData(cachedData);
+            setError(`Using cached data: ${errorMessage}`);
+          }
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [endpoint, options.method, JSON.stringify(options.body)]);
+
+  return { data, loading, error, refetch: () => fetchData() };
+}
+
+// Utility functions
+async function getCachedData<T>(key: string): Promise<T | null> {
+  try {
+    const cached = localStorage.getItem(`api_cache_${key}`);
+    if (cached) {
+      const { data, timestamp } = JSON.parse(cached);
+      const isExpired = Date.now() - timestamp > 5 * 60 * 1000; // 5 minutes
+      if (!isExpired) {
+        return data;
+      }
+    }
+  } catch (error) {
+    console.error('Cache retrieval error:', error);
+  }
+  return null;
+}
+
+async function cacheData<T>(key: string, data: T): Promise<void> {
+  try {
+    const cacheEntry = {
+      data,
+      timestamp: Date.now()
+    };
+    localStorage.setItem(`api_cache_${key}`, JSON.stringify(cacheEntry));
+  } catch (error) {
+    console.error('Cache storage error:', error);
+  }
+}
+
+function getAuthToken(): string {
+  return localStorage.getItem('auth_token') || '';
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API Documentation -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="api-documentation">
+                        <i class="fas fa-chevron-right"></i>
+                        API Documentation Strategies
+                    </h3>
+                    <div class="collapsible-content" id="api-documentation">
+                        <div class="documentation-approach">
+                            <h4>OpenAPI/Swagger Integration</h4>
+                            <div class="code-example">
+                                <h5>API Schema Definition:</h5>
+                                <pre><code class="language-yaml">
+openapi: 3.0.3
+info:
+  title: Vibe-Curator API
+  description: Travel content curation and management API
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: api-support@vibe-curator.com
+
+servers:
+  - url: https://api.vibe-curator.com/v1
+    description: Production server
+  - url: https://staging-api.vibe-curator.com/v1
+    description: Staging server
+
+paths:
+  /travel-posts:
+    get:
+      summary: Get travel posts
+      description: Retrieve a paginated list of travel posts with optional filtering
+      parameters:
+        - name: page
+          in: query
+          description: Page number for pagination
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: limit
+          in: query
+          description: Number of posts per page
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+        - name: location
+          in: query
+          description: Filter by location name
+          required: false
+          schema:
+            type: string
+        - name: tags
+          in: query
+          description: Filter by tags (comma-separated)
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TravelPost'
+                  pagination:
+                    $ref: '#/components/schemas/Pagination'
+
+components:
+  schemas:
+    TravelPost:
+      type: object
+      required:
+        - id
+        - title
+        - content
+        - location
+        - createdAt
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          maxLength: 200
+        content:
+          type: string
+        location:
+          $ref: '#/components/schemas/Location'
+        images:
+          type: array
+          items:
+            type: string
+            format: uri
+        tags:
+          type: array
+          items:
+            type: string
+        aiAnalysis:
+          $ref: '#/components/schemas/AIAnalysis'
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    Location:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+        country:
+          type: string
+        coordinates:
+          type: object
+          properties:
+            lat:
+              type: number
+              format: float
+            lng:
+              type: number
+              format: float
+
+    AIAnalysis:
+      type: object
+      properties:
+        sentiment:
+          type: string
+          enum: [positive, neutral, negative]
+        travelValue:
+          type: number
+          minimum: 0
+          maximum: 10
+        activities:
+          type: array
+          items:
+            type: string
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - BearerAuth: []
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Handling -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="error-handling">
+                        <i class="fas fa-chevron-right"></i>
+                        Error Handling Patterns
+                    </h3>
+                    <div class="collapsible-content" id="error-handling">
+                        <div class="error-strategies">
+                            <div class="strategy-card">
+                                <h5>Frontend Error Boundaries</h5>
+                                <div class="code-snippet">
+                                    <pre><code class="language-typescript">
+// components/ErrorBoundary.tsx
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Send error to monitoring service
+    this.reportError(error, errorInfo);
+  }
+
+  reportError(error: Error, errorInfo: ErrorInfo) {
+    // Integration with error monitoring service
+    if (process.env.NODE_ENV === 'production') {
+      // Send to Sentry, LogRocket, etc.
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="error-fallback">
+          <h2>Something went wrong</h2>
+          <p>We're sorry, but something unexpected happened.</p>
+          <button onClick={() => window.location.reload()}>
+            Reload Page
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                            <div class="strategy-card">
+                                <h5>Backend Error Middleware</h5>
+                                <div class="code-snippet">
+                                    <pre><code class="language-javascript">
+// middleware/errorHandler.js
+export const errorHandler = (error, request, reply) => {
+  const { statusCode = 500, message } = error;
+  
+  // Log error details
+  request.log.error({
+    error: error.message,
+    stack: error.stack,
+    url: request.url,
+    method: request.method,
+    headers: request.headers,
+    body: request.body
+  });
+
+  // Determine error response based on environment
+  const errorResponse = {
+    success: false,
+    error: {
+      message: statusCode < 500 ? message : 'Internal server error',
+      code: error.code || 'UNKNOWN_ERROR',
+      timestamp: new Date().toISOString(),
+      requestId: request.id
+    }
+  };
+
+  // Add stack trace in development
+  if (process.env.NODE_ENV === 'development') {
+    errorResponse.error.stack = error.stack;
+  }
+
+  reply.code(statusCode).send(errorResponse);
+};
+
+// Custom error classes
+export class ValidationError extends Error {
+  constructor(message, field) {
+    super(message);
+    this.name = 'ValidationError';
+    this.statusCode = 422;
+    this.field = field;
+  }
+}
+
+export class NotFoundError extends Error {
+  constructor(resource) {
+    super(`${resource} not found`);
+    this.name = 'NotFoundError';
+    this.statusCode = 404;
+  }
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Galleries Section -->
+        <section id="media-galleries" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-images"></i>
+                    Rich Media Galleries
+                </h2>
+                
+                <!-- React Gallery Libraries -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="gallery-libraries">
+                        <i class="fas fa-chevron-right"></i>
+                        React Gallery Libraries Comparison
+                    </h3>
+                    <div class="collapsible-content" id="gallery-libraries">
+                        <div class="comparison-table">
+                            <h4>Gallery Library Comparison (2024)</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Library</th>
+                                        <th>Bundle Size</th>
+                                        <th>Features</th>
+                                        <th>Performance</th>
+                                        <th>Recommendation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="recommended">
+                                        <td><strong>react-image-gallery</strong></td>
+                                        <td>45kb</td>
+                                        <td>Carousel, thumbnails, fullscreen</td>
+                                        <td>Excellent</td>
+                                        <td><span class="badge recommended">Recommended</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>react-photo-gallery</td>
+                                        <td>12kb</td>
+                                        <td>Responsive grid, masonry</td>
+                                        <td>Good</td>
+                                        <td><span class="badge alternative">Alternative</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>react-spring-lightbox</td>
+                                        <td>25kb</td>
+                                        <td>Smooth animations, touch support</td>
+                                        <td>Very Good</td>
+                                        <td><span class="badge consider">Consider</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="code-example">
+                            <h5>Travel Gallery Implementation:</h5>
+                            <pre><code class="language-typescript">
+// components/TravelGallery.tsx
+import React, { useState, useCallback } from 'react';
+import ImageGallery from 'react-image-gallery';
+import { motion, AnimatePresence } from 'framer-motion';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+interface TravelImage {
+  id: string;
+  original: string;
+  thumbnail: string;
+  description?: string;
+  location?: string;
+  capturedAt?: string;
+}
+
+interface TravelGalleryProps {
+  images: TravelImage[];
+  title?: string;
+  showThumbnails?: boolean;
+  autoPlay?: boolean;
+}
+
+export const TravelGallery: React.FC<TravelGalleryProps> = ({
+  images,
+  title,
+  showThumbnails = true,
+  autoPlay = false
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showLightbox, setShowLightbox] = useState(false);
+
+  const galleryImages = images.map(img => ({
+    original: img.original,
+    thumbnail: img.thumbnail,
+    description: img.description,
+    originalAlt: img.description || 'Travel photo',
+    thumbnailAlt: img.description || 'Travel photo thumbnail'
+  }));
+
+  const handleImageClick = useCallback(() => {
+    setShowLightbox(true);
+  }, []);
+
+  const handleSlide = useCallback((index: number) => {
+    setCurrentIndex(index);
+  }, []);
+
+  return (
+    <motion.div 
+      className="travel-gallery"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {title && (
+        <motion.h3 
+          className="gallery-title"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {title}
+        </motion.h3>
+      )}
+      
+      <div className="gallery-container">
+        <ImageGallery
+          items={galleryImages}
+          showThumbnails={showThumbnails}
+          showPlayButton={autoPlay}
+          showFullscreenButton={true}
+          showNav={true}
+          autoPlay={autoPlay}
+          slideInterval={4000}
+          onSlide={handleSlide}
+          onClick={handleImageClick}
+          lazyLoad={true}
+          additionalClass="travel-image-gallery"
+          renderItem={(item) => (
+            <div className="image-gallery-image">
+              <img
+                src={item.original}
+                alt={item.originalAlt}
+                loading="lazy"
+                onLoad={() => {
+                  // Track image load for performance monitoring
+                  console.log('Image loaded:', item.original);
+                }}
+              />
+              {item.description && (
+                <div className="image-description">
+                  {item.description}
+                </div>
+              )}
+            </div>
+          )}
+        />
+      </div>
+
+      <AnimatePresence>
+        {showLightbox && (
+          <motion.div
+            className="lightbox-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowLightbox(false)}
+          >
+            <motion.div
+              className="lightbox-content"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={images[currentIndex]?.original}
+                alt={images[currentIndex]?.description}
+                className="lightbox-image"
+              />
+              <div className="lightbox-info">
+                <h4>{images[currentIndex]?.description}</h4>
+                {images[currentIndex]?.location && (
+                  <p className="location">📍 {images[currentIndex].location}</p>
+                )}
+                {images[currentIndex]?.capturedAt && (
+                  <p className="date">📅 {images[currentIndex].capturedAt}</p>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+};
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animation Libraries -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="animation-libraries">
+                        <i class="fas fa-chevron-right"></i>
+                        Animation Libraries & Techniques
+                    </h3>
+                    <div class="collapsible-content" id="animation-libraries">
+                        <div class="animation-comparison">
+                            <h4>Animation Library Comparison</h4>
+                            <div class="comparison-grid">
+                                <div class="comparison-card recommended">
+                                    <h5>Framer Motion</h5>
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h6>Pros:</h6>
+                                            <ul>
+                                                <li>Declarative API</li>
+                                                <li>Excellent React integration</li>
+                                                <li>Advanced gesture support</li>
+                                                <li>Layout animations</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h6>Cons:</h6>
+                                            <ul>
+                                                <li>Larger bundle size (95kb)</li>
+                                                <li>Learning curve for complex animations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="badge recommended">Recommended</span>
+                                </div>
+                                <div class="comparison-card">
+                                    <h5>React Spring</h5>
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h6>Pros:</h6>
+                                            <ul>
+                                                <li>Physics-based animations</li>
+                                                <li>Smaller bundle (45kb)</li>
+                                                <li>Flexible API</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h6>Cons:</h6>
+                                            <ul>
+                                                <li>More complex setup</li>
+                                                <li>Less intuitive for beginners</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="badge alternative">Alternative</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offline Storage -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="offline-storage">
+                        <i class="fas fa-chevron-right"></i>
+                        Offline Media Storage Strategies
+                    </h3>
+                    <div class="collapsible-content" id="offline-storage">
+                        <div class="storage-strategy">
+                            <h4>Progressive Image Loading & Caching</h4>
+                            <div class="code-example">
+                                <h5>Offline Image Manager:</h5>
+                                <pre><code class="language-typescript">
+// utils/OfflineImageManager.ts
+class OfflineImageManager {
+  private cache: Cache | null = null;
+  private db: IDBDatabase | null = null;
+
+  async initialize() {
+    // Initialize Cache API
+    if ('caches' in window) {
+      this.cache = await caches.open('travel-images-v1');
+    }
+
+    // Initialize IndexedDB for metadata
+    return new Promise<void>((resolve, reject) => {
+      const request = indexedDB.open('TravelImagesDB', 1);
+      
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        this.db = request.result;
+        resolve();
+      };
+      
+      request.onupgradeneeded = (event) => {
+        const db = (event.target as IDBOpenDBRequest).result;
+        const store = db.createObjectStore('images', { keyPath: 'url' });
+        store.createIndex('lastAccessed', 'lastAccessed');
+        store.createIndex('size', 'size');
+      };
+    });
+  }
+
+  async cacheImage(url: string, priority: 'high' | 'medium' | 'low' = 'medium') {
+    if (!this.cache) return false;
+
+    try {
+      // Check if already cached
+      const cachedResponse = await this.cache.match(url);
+      if (cachedResponse) return true;
+
+      // Fetch and cache the image
+      const response = await fetch(url);
+      if (response.ok) {
+        await this.cache.put(url, response.clone());
+        
+        // Store metadata in IndexedDB
+        await this.storeImageMetadata(url, {
+          size: parseInt(response.headers.get('content-length') || '0'),
+          type: response.headers.get('content-type') || 'image/jpeg',
+          cachedAt: Date.now(),
+          lastAccessed: Date.now(),
+          priority
+        });
+        
+        return true;
+      }
+    } catch (error) {
+      console.error('Failed to cache image:', url, error);
+    }
+    
+    return false;
+  }
+
+  async getImage(url: string): Promise<string | null> {
+    if (!this.cache) return null;
+
+    try {
+      const cachedResponse = await this.cache.match(url);
+      if (cachedResponse) {
+        // Update last accessed time
+        await this.updateLastAccessed(url);
+        
+        const blob = await cachedResponse.blob();
+        return URL.createObjectURL(blob);
+      }
+    } catch (error) {
+      console.error('Failed to retrieve cached image:', url, error);
+    }
+    
+    return null;
+  }
+
+  async preloadImages(urls: string[], maxConcurrent = 3) {
+    const chunks = this.chunkArray(urls, maxConcurrent);
+    
+    for (const chunk of chunks) {
+      await Promise.allSettled(
+        chunk.map(url => this.cacheImage(url, 'low'))
+      );
+    }
+  }
+
+  async cleanupCache(maxSizeMB = 100) {
+    if (!this.db || !this.cache) return;
+
+    const transaction = this.db.transaction(['images'], 'readonly');
+    const store = transaction.objectStore('images');
+    const index = store.index('lastAccessed');
+    
+    const images: any[] = [];
+    let totalSize = 0;
+
+    return new Promise<void>((resolve) => {
+      index.openCursor().onsuccess = async (event) => {
+        const cursor = (event.target as IDBRequest).result;
+        
+        if (cursor) {
+          images.push(cursor.value);
+          totalSize += cursor.value.size;
+          cursor.continue();
+        } else {
+          // Remove oldest images if over limit
+          const maxSize = maxSizeMB * 1024 * 1024;
+          if (totalSize > maxSize) {
+            images.sort((a, b) => a.lastAccessed - b.lastAccessed);
+            
+            let removedSize = 0;
+            for (const image of images) {
+              if (totalSize - removedSize <= maxSize) break;
+              
+              await this.cache!.delete(image.url);
+              await this.removeImageMetadata(image.url);
+              removedSize += image.size;
+            }
+          }
+          resolve();
+        }
+      };
+    });
+  }
+
+  private chunkArray<T>(array: T[], size: number): T[][] {
+    const chunks: T[][] = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunks.push(array.slice(i, i + size));
+    }
+    return chunks;
+  }
+
+  private async storeImageMetadata(url: string, metadata: any) {
+    if (!this.db) return;
+    
+    const transaction = this.db.transaction(['images'], 'readwrite');
+    const store = transaction.objectStore('images');
+    await store.put({ url, ...metadata });
+  }
+
+  private async updateLastAccessed(url: string) {
+    if (!this.db) return;
+    
+    const transaction = this.db.transaction(['images'], 'readwrite');
+    const store = transaction.objectStore('images');
+    const image = await store.get(url);
+    
+    if (image) {
+      image.lastAccessed = Date.now();
+      await store.put(image);
+    }
+  }
+
+  private async removeImageMetadata(url: string) {
+    if (!this.db) return;
+    
+    const transaction = this.db.transaction(['images'], 'readwrite');
+    const store = transaction.objectStore('images');
+    await store.delete(url);
+  }
+}
+
+export const offlineImageManager = new OfflineImageManager();
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Assurance Section -->
+        <section id="quality-assurance" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-check-circle"></i>
+                    Quality Assurance & Testing
+                </h2>
+                
+                <!-- Testing Strategies -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="testing-strategies">
+                        <i class="fas fa-chevron-right"></i>
+                        Comprehensive Testing Strategy
+                    </h3>
+                    <div class="collapsible-content" id="testing-strategies">
+                        <div class="testing-pyramid">
+                            <h4>Testing Pyramid for Vibe-Curator</h4>
+                            <div class="pyramid-level">
+                                <h5>E2E Tests (10%)</h5>
+                                <p>Critical user journeys, cross-browser compatibility</p>
+                                <ul>
+                                    <li>User registration and authentication flow</li>
+                                    <li>Travel post creation and curation</li>
+                                    <li>AI-powered recommendations</li>
+                                    <li>Offline functionality</li>
+                                </ul>
+                            </div>
+                            <div class="pyramid-level">
+                                <h5>Integration Tests (20%)</h5>
+                                <p>API endpoints, service communication, database interactions</p>
+                                <ul>
+                                    <li>REST API endpoint testing</li>
+                                    <li>Database operations</li>
+                                    <li>External service integrations (OpenAI, Apify)</li>
+                                    <li>Microservice communication</li>
+                                </ul>
+                            </div>
+                            <div class="pyramid-level">
+                                <h5>Unit Tests (70%)</h5>
+                                <p>Individual components, functions, and utilities</p>
+                                <ul>
+                                    <li>React component testing</li>
+                                    <li>Business logic functions</li>
+                                    <li>Utility functions</li>
+                                    <li>Custom hooks</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="testing-tools">
+                            <h4>Recommended Testing Tools</h4>
+                            <div class="tool-grid">
+                                <div class="tool-card">
+                                    <h5>Frontend Testing</h5>
+                                    <ul>
+                                        <li><strong>Jest:</strong> Unit testing framework</li>
+                                        <li><strong>React Testing Library:</strong> Component testing</li>
+                                        <li><strong>MSW:</strong> API mocking</li>
+                                        <li><strong>Playwright:</strong> E2E testing</li>
+                                    </ul>
+                                </div>
+                                <div class="tool-card">
+                                    <h5>Backend Testing</h5>
+                                    <ul>
+                                        <li><strong>Jest:</strong> Unit and integration tests</li>
+                                        <li><strong>Supertest:</strong> HTTP assertion testing</li>
+                                        <li><strong>Testcontainers:</strong> Database testing</li>
+                                        <li><strong>Nock:</strong> HTTP request mocking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Quality -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="code-quality">
+                        <i class="fas fa-chevron-right"></i>
+                        Code Quality & Linting Configuration
+                    </h3>
+                    <div class="collapsible-content" id="code-quality">
+                        <div class="quality-tools">
+                            <h4>Code Quality Stack</h4>
+                            <div class="code-example">
+                                <h5>ESLint Configuration (.eslintrc.js):</h5>
+                                <pre><code class="language-javascript">
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2022: true,
+    node: true,
+    jest: true
+  },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'prettier'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
+    project: './tsconfig.json'
+  },
+  plugins: [
+    'react',
+    'react-hooks',
+    '@typescript-eslint',
+    'jsx-a11y',
+    'import',
+    'unused-imports'
+  ],
+  rules: {
+    // TypeScript specific rules
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/prefer-const': 'error',
+    
+    // React specific rules
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    
+    // Import rules
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index'
+        ],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ],
+    'unused-imports/no-unused-imports': 'error',
+    
+    // Accessibility rules
+    'jsx-a11y/alt-text': 'error',
+    'jsx-a11y/anchor-has-content': 'error',
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    
+    // General code quality
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'prefer-const': 'error',
+    'no-var': 'error'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json'
+      }
+    }
+  }
+};
+                                </code></pre>
+                            </div>
+                            
+                            <div class="code-example">
+                                <h5>Prettier Configuration (.prettierrc):</h5>
+                                <pre><code class="language-json">
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "proseWrap": "preserve"
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="quality-metrics">
+                            <h4>Code Quality Metrics</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <h5>Test Coverage</h5>
+                                    <p>Target: >80% overall coverage</p>
+                                    <ul>
+                                        <li>Statements: >85%</li>
+                                        <li>Branches: >80%</li>
+                                        <li>Functions: >90%</li>
+                                        <li>Lines: >85%</li>
+                                    </ul>
+                                </div>
+                                <div class="metric-card">
+                                    <h5>Code Complexity</h5>
+                                    <p>Cyclomatic complexity limits</p>
+                                    <ul>
+                                        <li>Functions: Max 10</li>
+                                        <li>Classes: Max 15</li>
+                                        <li>Files: Max 20</li>
+                                        <li>Modules: Max 25</li>
+                                    </ul>
+                                </div>
+                                <div class="metric-card">
+                                    <h5>Performance Budgets</h5>
+                                    <p>Bundle size and performance limits</p>
+                                    <ul>
+                                        <li>Initial bundle: <200kb</li>
+                                        <li>Route chunks: <100kb</li>
+                                        <li>First Paint: <1.5s</li>
+                                        <li>Time to Interactive: <3s</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CI/CD Integration -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="cicd-integration">
+                        <i class="fas fa-chevron-right"></i>
+                        CI/CD Integration & Automation
+                    </h3>
+                    <div class="collapsible-content" id="cicd-integration">
+                        <div class="cicd-pipeline">
+                            <h4>GitHub Actions Workflow</h4>
+                            <div class="code-example">
+                                <h5>CI/CD Pipeline (.github/workflows/ci-cd.yml):</h5>
+                                <pre><code class="language-yaml">
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test_db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+      
+      redis:
+        image: redis:7-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run type checking
+        run: npm run type-check
+
+      - name: Run unit tests
+        run: npm run test:unit
+        env:
+          CI: true
+
+      - name: Run integration tests
+        run: npm run test:integration
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+          REDIS_URL: redis://localhost:6379
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+        env:
+          CI: true
+
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+
+      - name: Build application
+        run: npm run build
+
+      - name: Run security audit
+        run: npm audit --audit-level moderate
+
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/develop'
+        run: |
+          echo "Deploying to staging environment"
+          # Add deployment commands here
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying to production environment"
+          # Add deployment commands here
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results.sarif'
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Implementation Recommendations & Roadmap
+                </h2>
+                
+                <!-- Technology Stack Summary -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="tech-stack-summary">
+                        <i class="fas fa-chevron-right"></i>
+                        Recommended Technology Stack
+                    </h3>
+                    <div class="collapsible-content" id="tech-stack-summary">
+                        <div class="stack-overview">
+                            <div class="stack-layer">
+                                <h4><i class="fab fa-react"></i> Frontend Stack</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item recommended">
+                                        <h5>React 18+</h5>
+                                        <p>Modern React with concurrent features and automatic batching</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>TypeScript</h5>
+                                        <p>Type safety and enhanced developer experience</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Tailwind CSS</h5>
+                                        <p>Utility-first CSS framework for rapid UI development</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Zustand</h5>
+                                        <p>Lightweight state management with excellent TypeScript support</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>React Query</h5>
+                                        <p>Server state management and caching</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>IndexedDB + Dexie</h5>
+                                        <p>Offline-first data storage and synchronization</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="stack-layer">
+                                <h4><i class="fas fa-server"></i> Backend Stack</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item recommended">
+                                        <h5>Fastify</h5>
+                                        <p>High-performance Node.js framework (78x faster than Express)</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>TypeScript</h5>
+                                        <p>Type-safe backend development</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>PostgreSQL</h5>
+                                        <p>Primary database for relational data</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>MongoDB</h5>
+                                        <p>Document storage for AI analysis and scraped content</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Redis</h5>
+                                        <p>Caching and session management</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Docker + Kubernetes</h5>
+                                        <p>Containerization and orchestration</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="stack-layer">
+                                <h4><i class="fas fa-cloud"></i> External Services</h4>
+                                <div class="tech-grid">
+                                    <div class="tech-item recommended">
+                                        <h5>OpenAI GPT-4</h5>
+                                        <p>AI content analysis and recommendations</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Azure OpenAI</h5>
+                                        <p>Enterprise AI services for production workloads</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>Apify</h5>
+                                        <p>Web scraping and data extraction platform</p>
+                                    </div>
+                                    <div class="tech-item recommended">
+                                        <h5>AWS S3</h5>
+                                        <p>Media storage and CDN</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation Roadmap -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="implementation-roadmap">
+                        <i class="fas fa-chevron-right"></i>
+                        Implementation Roadmap
+                    </h3>
+                    <div class="collapsible-content" id="implementation-roadmap">
+                        <div class="roadmap">
+                            <div class="phase">
+                                <h4>Phase 1: Foundation (Weeks 1-4)</h4>
+                                <div class="phase-content">
+                                    <h5>Frontend Setup</h5>
+                                    <ul>
+                                        <li>Initialize React 18+ project with TypeScript</li>
+                                        <li>Configure Tailwind CSS and design system</li>
+                                        <li>Set up Zustand for state management</li>
+                                        <li>Implement basic routing and navigation</li>
+                                        <li>Create responsive layout components</li>
+                                    </ul>
+                                    
+                                    <h5>Backend Infrastructure</h5>
+                                    <ul>
+                                        <li>Set up Fastify server with TypeScript</li>
+                                        <li>Configure PostgreSQL and MongoDB databases</li>
+                                        <li>Implement basic authentication and authorization</li>
+                                        <li>Set up Redis for caching</li>
+                                        <li>Create Docker containers for all services</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="phase">
+                                <h4>Phase 2: Core Features (Weeks 5-8)</h4>
+                                <div class="phase-content">
+                                    <h5>Travel Content Management</h5>
+                                    <ul>
+                                        <li>Implement travel post CRUD operations</li>
+                                        <li>Create media gallery components</li>
+                                        <li>Set up image optimization and storage</li>
+                                        <li>Implement search and filtering</li>
+                                        <li>Add location-based features</li>
+                                    </ul>
+                                    
+                                    <h5>Offline Capabilities</h5>
+                                    <ul>
+                                        <li>Implement IndexedDB storage with Dexie</li>
+                                        <li>Create offline synchronization logic</li>
+                                        <li>Set up service worker for caching</li>
+                                        <li>Implement progressive image loading</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="phase">
+                                <h4>Phase 3: AI Integration (Weeks 9-12)</h4>
+                                <div class="phase-content">
+                                    <h5>OpenAI Integration</h5>
+                                    <ul>
+                                        <li>Set up OpenAI API integration</li>
+                                        <li>Implement content analysis pipeline</li>
+                                        <li>Create recommendation engine</li>
+                                        <li>Add sentiment analysis features</li>
+                                        <li>Implement configurable AI parameters</li>
+                                    </ul>
+                                    
+                                    <h5>Data Scraping</h5>
+                                    <ul>
+                                        <li>Integrate Apify SDK</li>
+                                        <li>Set up Instagram and blog scraping</li>
+                                        <li>Implement content processing pipeline</li>
+                                        <li>Add compliance and rate limiting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="phase">
+                                <h4>Phase 4: Testing & Deployment (Weeks 13-16)</h4>
+                                <div class="phase-content">
+                                    <h5>Quality Assurance</h5>
+                                    <ul>
+                                        <li>Implement comprehensive test suite</li>
+                                        <li>Set up CI/CD pipeline</li>
+                                        <li>Configure code quality tools</li>
+                                        <li>Perform security audits</li>
+                                        <li>Optimize performance</li>
+                                    </ul>
+                                    
+                                    <h5>Production Deployment</h5>
+                                    <ul>
+                                        <li>Set up Kubernetes cluster</li>
+                                        <li>Configure monitoring and logging</li>
+                                        <li>Implement backup strategies</li>
+                                        <li>Set up CDN and caching</li>
+                                        <li>Launch production environment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best Practices Summary -->
+                <div class="research-subsection">
+                    <h3 class="subsection-title collapsible" data-target="best-practices">
+                        <i class="fas fa-chevron-right"></i>
+                        Key Best Practices & Considerations
+                    </h3>
+                    <div class="collapsible-content" id="best-practices">
+                        <div class="best-practices-grid">
+                            <div class="practice-card">
+                                <h5><i class="fas fa-shield-alt"></i> Security</h5>
+                                <ul>
+                                    <li>Implement proper authentication and authorization</li>
+                                    <li>Use HTTPS everywhere</li>
+                                    <li>Sanitize all user inputs</li>
+                                    <li>Regular security audits and updates</li>
+                                    <li>Implement rate limiting and DDoS protection</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <h5><i class="fas fa-tachometer-alt"></i> Performance</h5>
+                                <ul>
+                                    <li>Implement code splitting and lazy loading</li>
+                                    <li>Optimize images and media assets</li>
+                                    <li>Use efficient caching strategies</li>
+                                    <li>Monitor and optimize bundle sizes</li>
+                                    <li>Implement progressive loading patterns</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <h5><i class="fas fa-universal-access"></i> Accessibility</h5>
+                                <ul>
+                                    <li>Follow WCAG 2.1 AA guidelines</li>
+                                    <li>Implement proper ARIA labels</li>
+                                    <li>Ensure keyboard navigation support</li>
+                                    <li>Provide alternative text for images</li>
+                                    <li>Test with screen readers</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <h5><i class="fas fa-mobile-alt"></i> Mobile-First</h5>
+                                <ul>
+                                    <li>Design for mobile devices first</li>
+                                    <li>Implement touch-friendly interactions</li>
+                                    <li>Optimize for various screen sizes</li>
+                                    <li>Consider offline mobile usage</li>
+                                    <li>Minimize data usage</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <h5><i class="fas fa-balance-scale"></i> Ethics & Compliance</h5>
+                                <ul>
+                                    <li>Respect platform terms of service</li>
+                                    <li>Implement GDPR compliance</li>
+                                    <li>Practice ethical web scraping</li>
+                                    <li>Protect user privacy</li>
+                                    <li>Provide transparent AI usage</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <h5><i class="fas fa-chart-line"></i> Monitoring</h5>
+                                <ul>
+                                    <li>Implement comprehensive logging</li>
+                                    <li>Set up performance monitoring</li>
+                                    <li>Track user analytics responsibly</li>
+                                    <li>Monitor AI API usage and costs</li>
+                                    <li>Set up alerting for critical issues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Recommendations -->
+                <div class="final-recommendations">
+                    <h3>Executive Summary & Next Steps</h3>
+                    <div class="summary-content">
+                        <p>
+                            Based on comprehensive research across all technical domains, Vibe-Curator should be built as a modern, 
+                            offline-first web application using React 18+ and Fastify, with AI-powered content curation and 
+                            ethical web scraping capabilities. The recommended architecture prioritizes performance, scalability, 
+                            and user experience while maintaining high code quality and security standards.
+                        </p>
+                        
+                        <div class="next-steps">
+                            <h4>Immediate Next Steps:</h4>
+                            <ol>
+                                <li><strong>Project Setup:</strong> Initialize repositories and development environment</li>
+                                <li><strong>Team Assembly:</strong> Gather frontend, backend, and DevOps expertise</li>
+                                <li><strong>Architecture Review:</strong> Validate technical decisions with stakeholders</li>
+                                <li><strong>MVP Definition:</strong> Define minimum viable product scope</li>
+                                <li><strong>Development Sprint Planning:</strong> Break down Phase 1 into actionable tasks</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="success-metrics">
+                            <h4>Success Metrics:</h4>
+                            <ul>
+                                <li><strong>Performance:</strong> <3s initial load time, <1s subsequent navigation</li>
+                                <li><strong>Reliability:</strong> 99.9% uptime, graceful offline functionality</li>
+                                <li><strong>Quality:</strong> >80% test coverage, <5% bug rate</li>
+                                <li><strong>User Experience:</strong> Responsive design, accessibility compliance</li>
+                                <li><strong>Scalability:</strong> Support for 10k+ concurrent users</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
