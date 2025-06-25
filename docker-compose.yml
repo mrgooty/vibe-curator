@@ -1,0 +1,102 @@
+version: '3.8'
+
+services:
+  # Backend service - Node.js/Express with GraphQL, LangChain, LangGraph
+  backend:
+    build:
+      context: ./backend
+      target: development
+    container_name: vibe-curator-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - APIFY_API_TOKEN=${APIFY_API_TOKEN}
+      - CORS_ORIGIN=http://localhost:19006
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - /app/src/node_modules
+    networks:
+      - vibe-curator-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend service - React Native/Expo with web support
+  frontend:
+    build:
+      context: ./frontend
+      target: development
+    container_name: vibe-curator-frontend
+    ports:
+      - "19000:19000"  # Expo DevTools
+      - "19001:19001"  # Expo Metro bundler
+      - "19002:19002"  # Expo tunnel
+      - "19006:19006"  # Expo web
+      - "8081:8081"    # Metro bundler
+    environment:
+      - NODE_ENV=development
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+      - REACT_NATIVE_PACKAGER_HOSTNAME=0.0.0.0
+      - EXPO_USE_FAST_RESOLVER=1
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - vibe-curator-network
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+  # Shared utilities service (for future expansion)
+  shared:
+    image: node:18-alpine
+    container_name: vibe-curator-shared
+    working_dir: /app
+    volumes:
+      - ./shared:/app
+    networks:
+      - vibe-curator-network
+    command: ["tail", "-f", "/dev/null"]  # Keep container running for shared utilities
+
+networks:
+  vibe-curator-network:
+    driver: bridge
+    name: vibe-curator-network
+
+volumes:
+  backend_node_modules:
+  frontend_node_modules:
+
+# Production override configuration
+---
+# docker-compose.prod.yml (production overrides)
+version: '3.8'
+
+services:
+  backend:
+    build:
+      target: production
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes: []  # Remove volume mounts in production
+
+  frontend:
+    build:
+      target: production
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    volumes: []  # Remove volume mounts in production

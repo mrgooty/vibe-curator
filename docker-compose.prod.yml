@@ -1,0 +1,55 @@
+version: '3.8'
+
+# Production overrides for Vibe Curator
+# Use with: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+
+services:
+  backend:
+    build:
+      context: ./backend
+      target: production
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes: []  # Remove volume mounts in production
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  frontend:
+    build:
+      context: ./frontend
+      target: production
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - NODE_ENV=production
+    volumes: []  # Remove volume mounts in production
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # Remove shared service in production
+  shared:
+    deploy:
+      replicas: 0
+
+# Production-specific networks
+networks:
+  vibe-curator-network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: vibe-curator-prod

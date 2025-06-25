@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    
+    <title>Vibe Curator - AI-Powered Content Analysis</title>
+    <meta name="description" content="AI-powered content analysis platform for Instagram and TikTok creators" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#6200EE" />
+    <meta name="msapplication-TileColor" content="#6200EE" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vibecurator.app/" />
+    <meta property="og:title" content="Vibe Curator - AI-Powered Content Analysis" />
+    <meta property="og:description" content="AI-powered content analysis platform for Instagram and TikTok creators" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vibecurator.app/" />
+    <meta property="twitter:title" content="Vibe Curator - AI-Powered Content Analysis" />
+    <meta property="twitter:description" content="AI-powered content analysis platform for Instagram and TikTok creators" />
+    <meta property="twitter:image" content="/twitter-image.png" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+        }
+        
+        html, body, #root {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            background-color: #F5F5F5;
+            color: #1A1A1A;
+            overflow-x: hidden;
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #FFFFFF;
+            }
+        }
+        
+        /* Loading spinner */
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F5F5F5;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .loading-container {
+                background-color: #121212;
+            }
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #E0E0E0;
+            border-top: 4px solid #6200EE;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 16px;
+            font-size: 16px;
+            color: #666666;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .loading-text {
+                color: #CCCCCC;
+            }
+            .loading-spinner {
+                border-color: #333333;
+                border-top-color: #6200EE;
+            }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .loading-spinner {
+                animation: none;
+            }
+        }
+        
+        /* Focus styles */
+        *:focus {
+            outline: 2px solid #6200EE;
+            outline-offset: 2px;
+        }
+        
+        /* Selection styles */
+        ::selection {
+            background-color: #6200EE;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+            <h1>JavaScript Required</h1>
+            <p>Vibe Curator requires JavaScript to run. Please enable JavaScript in your browser and refresh the page.</p>
+        </div>
+    </noscript>
+    
+    <div id="root">
+        <div class="loading-container">
+            <div>
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Loading Vibe Curator...</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

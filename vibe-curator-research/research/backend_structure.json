@@ -1,0 +1,92 @@
+{
+  "Vibe_Curator_Backend/controllers": [
+    {
+      "name": "historyController.js",
+      "type": "file",
+      "size": 396
+    },
+    {
+      "name": "userController.js",
+      "type": "file",
+      "size": 678
+    },
+    {
+      "name": "vibeController.js",
+      "type": "file",
+      "size": 465
+    }
+  ],
+  "Vibe_Curator_Backend/routes": [
+    {
+      "name": "apify.js",
+      "type": "file",
+      "size": 432
+    },
+    {
+      "name": "auth.js",
+      "type": "file",
+      "size": 1253
+    },
+    {
+      "name": "historyRoutes.js",
+      "type": "file",
+      "size": 225
+    },
+    {
+      "name": "userRoutes.js",
+      "type": "file",
+      "size": 281
+    },
+    {
+      "name": "vibeRoutes.js",
+      "type": "file",
+      "size": 214
+    }
+  ],
+  "Vibe_Curator_Backend/services": [
+    {
+      "name": "historyService.js",
+      "type": "file",
+      "size": 136
+    },
+    {
+      "name": "userService.js",
+      "type": "file",
+      "size": 218
+    },
+    {
+      "name": "vibeService.js",
+      "type": "file",
+      "size": 906
+    }
+  ],
+  "Vibe_Curator_Backend/daos": [
+    {
+      "name": "historyDao.js",
+      "type": "file",
+      "size": 264
+    },
+    {
+      "name": "userDao.js",
+      "type": "file",
+      "size": 449
+    },
+    {
+      "name": "vibeDao.js",
+      "type": "file",
+      "size": 212
+    }
+  ],
+  "Vibe_Curator_Backend/utils": [
+    {
+      "name": "gptClient.js",
+      "type": "file",
+      "size": 849
+    },
+    {
+      "name": "logger.js",
+      "type": "file",
+      "size": 0
+    }
+  ]
+}

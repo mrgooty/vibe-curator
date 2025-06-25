@@ -1,0 +1,44 @@
+{
+  "name": "vibe-curator-backend",
+  "version": "1.0.0",
+  "description": "Extended Node.js/Express backend with GraphQL, LangChain, and LangGraph integration for AI-powered content analysis",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "cd src && npm start",
+    "dev": "cd src && npm run dev",
+    "install-deps": "cd src && npm install",
+    "test": "cd src && npm test"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "graphql",
+    "langchain",
+    "langgraph",
+    "ai",
+    "social-media",
+    "content-analysis",
+    "apify",
+    "instagram",
+    "tiktok"
+  ],
+  "author": "Vibe Curator Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "directories": {
+    "src": "./src",
+    "graphql": "./graphql",
+    "ai": "./ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibe-curator/backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vibe-curator/backend/issues"
+  },
+  "homepage": "https://github.com/vibe-curator/backend#readme"
+}

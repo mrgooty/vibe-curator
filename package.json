@@ -1,0 +1,104 @@
+{
+  "name": "vibe-curator",
+  "version": "1.0.0",
+  "description": "Full-stack AI-powered social media content analysis platform with Node.js/Express backend, React Native frontend, and containerized deployment",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "backend/src",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "install": "npm run install:all",
+    "install:all": "npm run install:shared && npm run install:backend && npm run install:frontend",
+    "install:shared": "cd shared && npm install --legacy-peer-deps",
+    "install:backend": "cd backend && npm install --legacy-peer-deps && cd src && npm install --legacy-peer-deps",
+    "install:frontend": "cd frontend && npm install --legacy-peer-deps",
+    
+    "dev": "npm run build:shared && concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run start",
+    "dev:shared": "cd shared && npm run build:watch",
+    
+    "start": "npm run build:shared && concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm run start",
+    "start:frontend": "cd frontend && npm run start",
+    
+    "build": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "build:shared": "cd shared && npm run build",
+    "build:backend": "cd backend && echo 'Backend build completed'",
+    "build:frontend": "cd frontend && npm run build",
+    
+    "test": "npm run test:shared && npm run test:backend && npm run test:frontend",
+    "test:shared": "cd shared && npm run type-check",
+    "test:backend": "cd backend && npm run test",
+    "test:frontend": "cd frontend && echo 'Frontend tests not configured yet'",
+    
+    "lint": "npm run lint:shared && npm run lint:backend && npm run lint:frontend",
+    "lint:shared": "cd shared && npm run lint",
+    "lint:backend": "echo 'Backend linting not configured yet'",
+    "lint:frontend": "echo 'Frontend linting not configured yet'",
+    
+    "clean": "npm run clean:shared && npm run clean:backend && npm run clean:frontend && npm run clean:docker",
+    "clean:shared": "cd shared && npm run clean",
+    "clean:backend": "cd backend && rm -rf node_modules && cd src && rm -rf node_modules",
+    "clean:frontend": "cd frontend && rm -rf node_modules",
+    "clean:docker": "docker system prune -f",
+    
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:up:detached": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    
+    "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
+    "docker:prod:build": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml build",
+    "docker:prod:up": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d",
+    
+    "setup": "npm run install:all && npm run build:shared",
+    "reset": "npm run clean && npm run setup",
+    
+    "health": "curl -f http://localhost:3000/health && curl -f http://localhost:19006/",
+    "logs:backend": "docker-compose logs -f backend",
+    "logs:frontend": "docker-compose logs -f frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "vibe-curator",
+    "social-media",
+    "ai-analysis",
+    "content-analysis",
+    "nodejs",
+    "express",
+    "react-native",
+    "expo",
+    "graphql",
+    "langchain",
+    "langgraph",
+    "docker",
+    "instagram",
+    "tiktok",
+    "sentiment-analysis",
+    "full-stack"
+  ],
+  "author": "Vibe Curator Team",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibe-curator/vibe-curator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vibe-curator/vibe-curator/issues"
+  },
+  "homepage": "https://github.com/vibe-curator/vibe-curator#readme"
+}

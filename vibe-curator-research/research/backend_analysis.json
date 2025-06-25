@@ -1,0 +1,22 @@
+{
+  "current_tech_stack": {
+    "runtime": "Node.js",
+    "framework": "Express.js (detected from code structure)",
+    "ai_integration": "OpenAI GPT (gptClient.js exists)",
+    "scraping": "Apify integration (apify.js route exists)",
+    "architecture": "MVC with separate controllers, services, DAOs"
+  },
+  "existing_features": {
+    "user_management": "User controller and routes exist",
+    "vibe_curation": "Vibe controller for content management",
+    "history_tracking": "History controller for user activity",
+    "ai_integration": "GPT client utility for AI features",
+    "web_scraping": "Apify integration for content extraction"
+  },
+  "extension_points": {
+    "graphql": "Can be added as middleware to existing Express app",
+    "langchain": "Can integrate with existing gptClient.js",
+    "langgraph": "Can be added for complex AI workflows",
+    "react_native": "Frontend to consume existing and new APIs"
+  }
+}

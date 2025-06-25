@@ -1,0 +1,116 @@
+{
+  ".nojekyll": {
+    "type": "file",
+    "size": 0,
+    "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/.nojekyll"
+  },
+  "Vibe_Curator_Backend": {
+    "type": "dir",
+    "size": 0,
+    "download_url": null,
+    "contents": {
+      ".env": {
+        "type": "file",
+        "size": 170,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/Vibe_Curator_Backend/.env"
+      },
+      "agents": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "controllers": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "daos": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "db": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "node_modules": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "package-lock.json": {
+        "type": "file",
+        "size": 50418,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/Vibe_Curator_Backend/package-lock.json"
+      },
+      "package.json": {
+        "type": "file",
+        "size": 430,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/Vibe_Curator_Backend/package.json"
+      },
+      "routes": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "server.js": {
+        "type": "file",
+        "size": 452,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/Vibe_Curator_Backend/server.js"
+      },
+      "services": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "utils": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      }
+    }
+  },
+  "vibe-curator-research": {
+    "type": "dir",
+    "size": 0,
+    "download_url": null,
+    "contents": {
+      ".bash_logout": {
+        "type": "file",
+        "size": 220,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/vibe-curator-research/.bash_logout"
+      },
+      ".bashrc": {
+        "type": "file",
+        "size": 3526,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/vibe-curator-research/.bashrc"
+      },
+      ".profile": {
+        "type": "file",
+        "size": 807,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/vibe-curator-research/.profile"
+      },
+      ".sudo_as_admin_successful": {
+        "type": "file",
+        "size": 0,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/vibe-curator-research/.sudo_as_admin_successful"
+      },
+      "final": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      },
+      "index.html": {
+        "type": "file",
+        "size": 337,
+        "download_url": "https://raw.githubusercontent.com/mrgooty/vibe-curator/main/vibe-curator-research/index.html"
+      },
+      "research": {
+        "type": "dir",
+        "size": 0,
+        "download_url": null
+      }
+    }
+  }
+}
